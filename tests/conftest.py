@@ -8,9 +8,7 @@ MAIN_URL = "https://demo.assessment.playershealth.com/register"
 
 @pytest.fixture
 def driver():
-    options = Options()
-    options.add_argument('--headless')
-    wd = webdriver.Chrome(options=options)
+    wd = webdriver.Chrome()
     wd.implicitly_wait(10)
     yield wd
     wd.quit()
